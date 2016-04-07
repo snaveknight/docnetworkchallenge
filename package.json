@@ -1,0 +1,24 @@
+{
+  "name": "express-challenge",
+  "version": "1.0.0",
+  "description": "A small coding challenge to implement an API route that returns fibonacci numbers",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.13.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/docnetwork/express-challenge.git"
+  },
+  "author": "Eric Krawczyk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/docnetwork/express-challenge/issues"
+  },
+  "homepage": "https://github.com/docnetwork/express-challenge#readme"
+}
