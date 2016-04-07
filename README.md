@@ -23,8 +23,7 @@ The spec is as follows:
 
 - [ ] A single API route that will return a JSON object containing the `n`th fibonacci number
 - [ ] The route will be in the format `http://<hostname>/api/fib/<n>` where `<n>` is a parameter representing the `n`th fibonacci number
-- [ ] The JSON response returns the following properties:
-  - Must return a valid HTTP Response code
+- [ ] The JSON response returns a valid HTTP response code, as well as the following properties:
   - [ ] `nth` - the index of the number in the fibonacci sequence
   - [ ] `value` - the `n`th value of the fibonacci sequence
   - [ ] `timestamp` - the date/time when the response was sent, as an ISO string
