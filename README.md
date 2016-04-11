@@ -22,7 +22,7 @@ You'll be creating an API route using [Node.js](https://nodejs.org/en/about/) an
 The spec is as follows:
 
 - [ ] A single API route that will return a JSON object containing the `n`th fibonacci number
-- [ ] The route will be in the format `http://<hostname>/api/fib/<n>` where `<n>` is a parameter representing the `n`th fibonacci number
+- [ ] The route must contain a parameter representing the `n`th fibonacci number
 - [ ] The JSON response returns a valid HTTP response code, as well as the following properties:
   - [ ] `nth` - the index of the number in the fibonacci sequence
   - [ ] `value` - the `n`th value of the fibonacci sequence
@@ -37,7 +37,7 @@ The spec is as follows:
 
 ### Extra Credit
 
-- Implement iterative _and_ recursive fib functions, and allow for a `method` query parameter that can specify either `?method=iterative` or `?method=recursive`
+- Implement iterative _and_ recursive fib functions, and allow for a `method` query parameter that can specify which method to use
 - Automated tests included for the project. Use your framework of choice for testing and include dependencies such that we can run the tests here.
 
 
