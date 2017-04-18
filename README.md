@@ -22,7 +22,7 @@ You'll be creating an API route using [Node.js](https://nodejs.org/en/about/) an
 The spec is as follows:
 
 - [ ] A single API route that will return a JSON object containing the `n`th fibonacci number
-- [ ] The route must contain a parameter representing the `n`th fibonacci number
+- [ ] The route must contain a parameter representing the `n`th fibonacci number (e.g. `localhost:3000/fibonacci/5`)
 - [ ] The JSON response returns a valid HTTP response code, as well as the following properties:
   - [ ] `nth` - the index of the number in the fibonacci sequence
   - [ ] `value` - the `n`th value of the fibonacci sequence

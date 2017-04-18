@@ -1,11 +1,11 @@
 'use strict';
-var express = require('express');
-var port    = 3000;
 
-var app = express();
+const express = require('express');
+const app     = express();
+const PORT    = 3000;
 
-// Implement your route here!
+// implement your fib function and route here!
 
-app.listen(port);
+app.listen(PORT);
 
-console.log("Listening on port: " + port.toString());
+console.log("Listening on port:", PORT);
