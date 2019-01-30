@@ -1,10 +1,10 @@
 {
   "name": "express-challenge",
   "version": "1.0.0",
-  "description": "A small coding challenge to implement an API route that returns fibonacci numbers",
+  "description": "A small coding challenge to implement an API route to query the Google Books API",
   "main": "server.js",
   "dependencies": {
-    "express": "^4.13.4"
+    "express": "4.16.4"
   },
   "devDependencies": {},
   "scripts": {
@@ -15,7 +15,7 @@
     "type": "git",
     "url": "git+https://github.com/docnetwork/express-challenge.git"
   },
-  "author": "Eric Krawczyk",
+  "author": "webteam@docnetwork.org",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/docnetwork/express-challenge/issues"
