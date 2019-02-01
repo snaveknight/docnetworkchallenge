@@ -1,45 +1,32 @@
-## Fibonacci's API
-![fib](https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Fibonacci_spiral_34.svg/220px-Fibonacci_spiral_34.svg.png)
+## Google Books API ... API
 
-The Fibonacci Sequence is an integer sequence commonly used in places where increasing sequences are needed, like login throttling or coding interview questions :smile:. Formally it's defined as:
+For this challenge you will be creating a rudimentary Express API to query and store results from the Google Books API. This is a test of basic NodeJS and back end proficiency.
 
-```
-fib(n) = fib(n-1) + fib(n-2)
-```
+### Instructions
+- Clone this repository and complete the challenge according to the specifications below.
+- Once finished, email your [patch](https://robots.thoughtbot.com/send-a-patch-to-someone-using-git-format-patch) to jobs+dev@docnetwork.org and we will review your submission. **(Do _Not_ Open A Pull Request)**
 
-For this exercise we'll use the following base cases:
-```
-fib(0) = 0
-fib(1) = 1
-```
-
-
-### What do I do?
-
-This is a simple test of basic CS fundamentals as well as basic API knowledge.
-You'll be creating an API route using [Node.js](https://nodejs.org/en/about/) and [Express](http://expressjs.com/en/guide/routing.html) that returns the `n`th fibonacci number
-
-The spec is as follows:
-
-- [ ] A single API route that will return a JSON object containing the `n`th fibonacci number
-- [ ] The route must contain a parameter representing the `n`th fibonacci number (e.g. `localhost:3000/fibonacci/5`)
-- [ ] The JSON response returns a valid HTTP response code, as well as the following properties:
-  - [ ] `nth` - the index of the number in the fibonacci sequence
-  - [ ] `value` - the `n`th value of the fibonacci sequence
-  - [ ] `timestamp` - the date/time when the response was sent, as an ISO string
-  - [ ] `elapsed` - the time it took to calculate the `n`th fibonacci number, in milliseconds
-
-### For consideration:
-
-- Performance is important here. Make sure to watch how frequently you're evaluating a `fib()` function such that you're only running it as needed.
-- Update the last section of this `README.md` with any thoughts or explanations you may have.
-- You can choose to use either recursion or iteration for your implementation, but please let us know why you chose the one you did in the README.
+### Specifications
+- Research the [Google Books Volume API](https://developers.google.com/books/docs/v1/reference/volumes) to determine how to search for books given a query. You will need to create an [API key](https://developers.google.com/books/docs/v1/using#APIKey).
+- Implement an API route that accepts a search query, passes that along to the Books API (using a utility such as [https](https://nodejs.org/api/https.html), [axios](https://www.npmjs.com/package/axios), or [request](https://www.npmjs.com/package/request) to name a few), and responds with a collection of book results in a JSON format that includes the following details:
+  - Title
+  - Authors
+  - Description (First 140 characters)
+  - Categories
+  - Publisher
+  - Published Date
+  - Preview Link
+- Each query should store the search query and associated responses in a database or other format (such as writing to a local file). Entries should include all of the above information as well as a timestamp of when the entry was created. DocNetwork uses and recommends PostgreSQL for a DB driver, but you are free to choose whatever you are most comfortable with.
+- Security is important, so don't send us your Books API key! The key should be loaded in through an external file that is not included in your patch.
+- Include a means for us to create your database locally. This could be `.sql` file(s), ORM migration file(s), or some plain text describing your database and schema.
+- All code must be your own. Do not plagiarize, copy, or steal code.
 
 ### Extra Credit
+- With the above we're only writing entries to a database with no way to access them. An ideal flow would have the API query your database for potential matches; if a match is found, return that and skip the Books API call; if no match is found, continue with the Books API call and return those results as usual.
 
-- Implement iterative _and_ recursive fib functions, and allow for a `method` query parameter that can specify which method to use
-- Automated tests included for the project. Use your framework of choice for testing and include dependencies such that we can run the tests here.
-
-
-### Solution Discussion:
-- Your solution explanation goes here.
+### Resources
+- NodeJS https://nodejs.org/en/
+- ExpressJS https://expressjs.com/
+- PostgreSQL https://www.postgresql.org/docs/, https://node-postgres.com/
+- Google Books API https://developers.google.com/books/docs/v1/reference/
+- DocNetwork! If you have any questions about the specifications or how to implement something, feel free to reach out to us. It will not count against your final review, and may even end up being a plus.
