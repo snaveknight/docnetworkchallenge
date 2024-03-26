@@ -4,7 +4,7 @@
   "description": "A small coding challenge to implement an API route to query the Google Books API",
   "main": "server.js",
   "dependencies": {
-    "express": "4.16.4"
+    "express": "4.19.2"
   },
   "devDependencies": {},
   "scripts": {
